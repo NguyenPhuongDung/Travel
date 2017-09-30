@@ -10,6 +10,8 @@ namespace TravelServer.Models
         public DataContext()
             : base("name=DataContext")
         {
+            this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<Account> Accounts { get; set; }
